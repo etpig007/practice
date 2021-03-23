@@ -1,3 +1,4 @@
+#Louis wang. For OPD medical record.
 from tkinter import *
 
 main = Tk()
