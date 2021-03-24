@@ -1,15 +1,20 @@
-# Louis wang. For OPD medical record.
+# Louis Wang. For OPD medical record.
+# Ver 1.01,add moore general NE
 from tkinter import *
 
 main = Tk()
-main.geometry('950x650')
+main.geometry('900x700')
 main.title('理學檢查')
 
 GCS = StringVar()
 VAS = StringVar()
 Pupil = StringVar()
+EOM = StringVar()
 MP = StringVar()
 DTR = StringVar()
+VisualField = StringVar()
+FingerNFinger = StringVar()
+TendomGait = StringVar()
 
 Hoffman = StringVar()
 Hoffman.set('nil')
@@ -42,8 +47,12 @@ def insertTEXT():
     txt.insert('end', 'GCS: ' + GCS.get() + '\n')
     txt.insert('end', 'VAS: ' + VAS.get() + '\n')
     txt.insert('end', 'Pupil: ' + Pupil.get() + '\n')
+    txt.insert('end', 'EOM: ' + EOM.get() + '\n')
     txt.insert('end', 'Muscle power: ' + MP.get() + '\n')
-    txt.insert('end', 'DTR: ' + DTR.get() + '\n\n')
+    txt.insert('end', 'DTR: ' + DTR.get() + '\n')
+    txt.insert('end', 'VisualField: ' + DTR.get() + '\n')
+    txt.insert('end', 'FingerNFinger: ' + DTR.get() + '\n')
+    txt.insert('end', 'TendomGait: ' + DTR.get() + '\n\n')
     txt.insert('end', '---Cervical---\n')
     txt.insert('end', 'Hoffman test: ' + Hoffman.get() + '\n')
     txt.insert('end', 'Shoulder abduction test: ' + SAT.get() + '\n')
@@ -69,15 +78,23 @@ def copyTEXT():
 # NE
 General = LabelFrame(main, text='NE', labelanchor='n',width=500)
 Label(General, text='GCS: ').grid(row=0)
-Entry(General, width=10, textvariable=GCS).grid(row=0, column=1,padx=10)
+Entry(General, width=20, textvariable=GCS).grid(row=0, column=1,padx=10)
 Label(General, text='VAS: ').grid(row=1)
-Entry(General, width=10, textvariable=VAS).grid(row=1, column=1,padx=10)
+Entry(General, width=20, textvariable=VAS).grid(row=1, column=1,padx=10)
 Label(General, text='Pupil(L/R): ').grid(row=2)
-Entry(General, width=10, textvariable=Pupil).grid(row=2, column=1,padx=10)
-Label(General, text='Muscle power: ').grid(row=3)
-Entry(General, width=10, textvariable=MP).grid(row=3, column=1,padx=10)
-Label(General, text='DTR: ').grid(row=4)
-Entry(General, width=10, textvariable=DTR).grid(row=4, column=1,padx=10,pady=5)
+Entry(General, width=20, textvariable=Pupil).grid(row=2, column=1,padx=10)
+Label(General, text='EOM: ').grid(row=3)
+Entry(General, width=20, textvariable=EOM).grid(row=3, column=1,padx=10)
+Label(General, text='Muscle power: ').grid(row=4)
+Entry(General, width=20, textvariable=MP).grid(row=4, column=1,padx=10)
+Label(General, text='DTR: ').grid(row=5)
+Entry(General, width=20, textvariable=DTR).grid(row=5, column=1,padx=10,pady=5)
+Label(General, text='Visual Field: ').grid(row=6)
+Entry(General, width=20, textvariable=VisualField).grid(row=6, column=1,padx=10,pady=5)
+Label(General, text='FingerNFinger ').grid(row=7)
+Entry(General, width=20, textvariable=FingerNFinger).grid(row=7, column=1,padx=10,pady=5)
+Label(General, text='Tendom Gait ').grid(row=8)
+Entry(General, width=20, textvariable=TendomGait).grid(row=8, column=1,padx=10,pady=5)
 General.pack(padx=20, pady=10, anchor='w')
 
 # Cervical PE
@@ -132,11 +149,11 @@ Carpal.pack(padx=20, pady=10, anchor='w')
 
 # check button
 txt = Text(main, width=70, height=45)
-txt.place(x=400, y=10)
+txt.place(x=350, y=10)
 
 btn1 = Button(main, text='確定', command=insertTEXT)
-btn1.place(x=20, y=550)
+btn1.place(x=20, y=650)
 btn2 = Button(main, text='複製文字', command=copyTEXT)
-btn2.place(x=150, y=550)
+btn2.place(x=150, y=650)
 
 main.mainloop()
