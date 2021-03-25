@@ -5,11 +5,11 @@ pyautogui.doubleClick()
 #輸入帳號
 pyautogui.moveTo(801,411,duration=0.2)
 pyautogui.click()
-pyautogui.typewrite('04053',interval=0.1)
+pyautogui.typewrite('帳號',interval=0.1)
 #輸入密碼
 pyautogui.moveTo(797,439,duration=0.2)
 pyautogui.click()
-pyautogui.typewrite('A44125',interval=0.1)
+pyautogui.typewrite('密碼',interval=0.1)
 pyautogui.press('enter')
 #按Enter
 pyautogui.moveTo(1018,411,duration=0.2)
