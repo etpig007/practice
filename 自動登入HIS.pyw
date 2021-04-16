@@ -1,27 +1,27 @@
 import pyautogui
-import time
 import subprocess
 import os
+import time
+pyautogui.PAUSE=0.5
 command = 'taskkill /f /t /im AdmOrder1.exe'
 os.system(command)
 subprocess.Popen('C://Tch/exe/loginscreen.exe')
-time.sleep(0.5)
+
+account='haha'
+pasw='nono'
 #輸入帳號
 pyautogui.moveTo(801,411,duration=0.2)
 pyautogui.click()
-pyautogui.typewrite('04053',interval=0.1)
+pyautogui.typewrite(account,interval=0.1)
 #輸入密碼
 pyautogui.moveTo(797,439,duration=0.2)
 pyautogui.click()
-pyautogui.typewrite('A44125',interval=0.1)
+pyautogui.typewrite(pasw,interval=0.1)
 pyautogui.press('enter')
-time.sleep(0.5)
 pyautogui.press('enter')
-time.sleep(0.5)
 #按Enter
 pyautogui.moveTo(1018,411,duration=0.2)
 pyautogui.doubleClick()
-time.sleep(0.5)
 pyautogui.press('enter')
 #住院系統
 pyautogui.moveTo(773,477,duration=0.2)
