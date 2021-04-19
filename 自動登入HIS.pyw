@@ -9,10 +9,10 @@ time.sleep(1)
 #輸入帳號
 pyautogui.moveTo(801,411,duration=0.2)
 pyautogui.click()
-pyautogui.typewrite('04053',interval=0.1)
+pyautogui.typewrite('account',interval=0.1)
 #輸入密碼
 pyautogui.press('tab')
-pyautogui.typewrite('A44125',interval=0.1)
+pyautogui.typewrite('password',interval=0.1)
 pyautogui.press('Alt'+'F4')
 pyautogui.press('enter')
 pyautogui.press('enter')
