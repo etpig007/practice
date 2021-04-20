@@ -13,8 +13,10 @@ pyautogui.typewrite('account',interval=0.1)
 #輸入密碼
 pyautogui.press('tab')
 pyautogui.typewrite('password',interval=0.1)
-pyautogui.press('Alt'+'F4')
 pyautogui.press('enter')
+pyautogui.moveTo(850,550,duration=0.2)
+pyautogui.click()
+pyautogui.press('Alt'+'F4')
 pyautogui.press('enter')
 pyautogui.press('enter')
 #住院系統
